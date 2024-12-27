@@ -65,9 +65,9 @@ def activate(request, uid64, token):
     if user is not None and default_token_generator.check_token(user, token):
         user.is_active = True
         user.save()
-        return redirect("http://127.0.0.1:8000/Student/login/")
+        return redirect("http://127.0.0.1:5500/login.html")
     else:
-        return redirect("http://127.0.0.1:8000/Student/register/")
+        return redirect("http://127.0.0.1:5500/registetion.html")
 
 
 class UserLoginApiView(APIView):
